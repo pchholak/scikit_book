@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<cat_food &le; 0.5<br/>gini = 0.49<br/>samples = 14<br/>value = [8, 6]<br/>class = dog>, fillcolor="#e5813940"] ;
+1 [label=<grumpy &le; 0.5<br/>gini = 0.375<br/>samples = 8<br/>value = [2, 6]<br/>class = cat>, fillcolor="#399de5aa"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 4]<br/>class = cat>, fillcolor="#399de5ff"] ;
+1 -> 2 ;
+3 [label=<bacon &le; 0.5<br/>gini = 0.5<br/>samples = 4<br/>value = [2, 2]<br/>class = dog>, fillcolor="#e5813900"] ;
+1 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1]<br/>class = cat>, fillcolor="#399de5ff"] ;
+3 -> 4 ;
+5 [label=<fetch &le; 0.5<br/>gini = 0.444<br/>samples = 3<br/>value = [2, 1]<br/>class = dog>, fillcolor="#e581397f"] ;
+3 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [2, 0]<br/>class = dog>, fillcolor="#e58139ff"] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1]<br/>class = cat>, fillcolor="#399de5ff"] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 6<br/>value = [6, 0]<br/>class = dog>, fillcolor="#e58139ff"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
